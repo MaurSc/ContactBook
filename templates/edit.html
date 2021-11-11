@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Edit
+{% endblock%}
+
+{% block main %}
+<p>{{elid}}</p>
+    <div class="jumbotron jumbotron-fluid">
+        <form action="/edit" method="post">
+            <select name="name" class=" custom-select form-control">
+                <option selected="true" disabled="disabled">Select contact</option>
+                {% for contact in contacts %}
+                <option value="{{contact['name']}}">{{contact['name']}}</option>
+                {% endfor %}
+            </select>
+            <div class="input-group-append justify-content-center">
+                <button class="btn btn-dark" type="submit">Edit</button>
+            </div>
+        </form>
+    </div>
+{% endblock%}

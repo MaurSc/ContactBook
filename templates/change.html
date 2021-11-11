@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block title %}
+ Change
+{% endblock%}
+
+{% block main %}
+<div class="container">
+    <h2>Old contact</h2>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Phone</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for con in contac%}
+        <tr class="table-info">
+          <td>{{ con['name'] }}</td>
+          <td>{{ con['number'] }}</td>
+          <td>{{ con['email'] }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+</div>
+<h2>New contact</h2>
+<div class="container d-flex justify-content-center">
+  <form class="form-inline" action="/edit" method="POST">
+    <label for="numbre">New number:</label>
+    <input type="number" style="display:none;" value={% for con in contac%}{{ con['id'] }}{% endfor %} name="elid">
+    <input type="tel" autocomplete="off" autofocus class="form-control" id="numbre" placeholder="Enter new number" name="number">
+    <label for="email">New Email:</label>
+    <input type="email" autocomplete="off" class="form-control" id="email" placeholder="Enter new email" name="email">
+    <button type="submit" class="btn btn-dark">Edit</button>
+  </form>
+</div>
+{% endblock%}
