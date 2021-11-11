@@ -8,8 +8,8 @@ In this project I tried to put into practice much of what I learned in the cours
 ```
 mkdir finalProjectMC
 cd finalProjectMC
-git clone xxxxxxxxxxx
-cd CS50-FP
+git clone https://github.com/MaurSc/contactbook.git
+cd contactbook
 ```
 ### Prerequsites
 
