@@ -96,6 +96,3 @@ flask run
         -The user has complete freedom to edit the number and email of their contact.
     7. Delete:
         -From here the user will be able to eliminate the users that he wishes convenient.
-        
-## Video Demo:  
-https://youtu.be/w3sp3H2M9E4
